@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .table{
+            display: table;
+        }
+        .row{
+            display: table-row;
+        }
+        .cell{
+            display: table-cell;
+        }
+        .row, .cell{
+            padding: 2px;
+        }
+
+        .content{
+            display: table;
+            width: 100%;
+        }
+        .box{
+            display : table-cell;
+            background-color: lightblue;
+            text-align: center;
+        }
+        .content .box+.box{
+            border-left: 5px solid lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="row">
+            <div class="cell">A</div>
+            <div class="cell">A</div>
+            <div class="cell">A</div>
+        </div>
+        <div class="row">
+            <div class="cell">B</div>
+            <div class="cell">B</div>
+            <div class="cell">B</div>
+        </div>
+        <div class="row">
+            <div class="cell">C</div>
+            <div class="cell">C</div>
+            <div class="cell">C</div>
+        </div>
+    </div>   
+    
+    <div class="content">
+        <div class="box">
+            <h3>제목</h3>
+            <p>도레미파솔라시도</p>
+        </div>
+        <div class="box">
+            <h3>제목</h3>
+            <p>도레미파솔라시도</p>
+        </div>
+        <div class="box">
+            <h3>제목</h3>
+            <p>도레미파솔라시도</p>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>간단한 사진 격자 레이아웃 만들기</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .grid-container{
+            margin-top: 30px;
+            width: 700px;
+            display: grid;
+            grid-template-columns:auto auto auto;
+            gap: 10px;
+        }
+
+        .grid-container img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            border: 2px solid black;
+            border-radius: 10%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <img src="../css-grid/img/stitchImg.webp" alt="">
+        <img src="../css-grid/img/_.jpeg" alt="">
+        <img src="../css-grid/img/_ (1).jpeg" alt="">
+        <img src="../css-grid/img/_ (2).jpeg" alt="">
+        <img src="../css-grid/img/Disney's Lilo & Stitch.jpeg" alt="">
+        <img src="../css-grid/img/_ (3).jpeg" alt="">
+        <img src="../css-grid/img/_ (1).jpeg" alt="">
+        <img src="../css-grid/img/_ (3).jpeg" alt="">
+        <img src="../css-grid/img/Disney's Lilo & Stitch.jpeg" alt="">
+    
+    </div>
+</body>
+</html>

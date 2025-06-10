@@ -1,0 +1,26 @@
+/* 기본 css :reset */
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    /* 최소한 들어오자마자 보이는 페이지는 꽉 채우겠다.  */
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    /*  */
+}
+
+img{
+    /* max-width: 1200px; */
+
+}
+
+

@@ -1,0 +1,47 @@
+.side-menu{
+    max-width: 290px;
+    position: fixed;
+    left: 50%;
+    top: 84px;
+    transform: translateX(calc(-50% + 322px));
+    flex-direction: column;
+}
+
+.side-menu__footer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media(min-width: 1024px){
+    .side-menu{
+        display: flex;
+    }
+}
+
+/* top:50%
+    left:50%
+    transform : translate( -50%, -50%)
+    해애 정중앙이된다. 
+
+    white-space : 요소가 공백을 처리하는 방법 
+*/
+
+.cricle-container{
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    position: relative;
+}
+
+.cricle{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    z-index: 2;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

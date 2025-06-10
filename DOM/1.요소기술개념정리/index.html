@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <label for=music>좋아하는 음악은?</label>
+    <input id="music" type="text" value="장르를 입력하세요"> -->
+    
+
+    <script>
+        // const element = document.getElementById("music");
+        // const value = element.value;
+        // console.log(value);
+
+        // element.value = "클래식";
+
+
+
+
+
+
+        // const values = [1,2];
+        // const getValue = (index) =>{
+        //     return values[index];
+        // };
+        // const value = getValue(1);
+        // console.log(value);
+        
+        // const getAttributeValue = (id) => {
+        //     const element = document.getElementById(id);
+        //     return element.value;
+		// };
+		
+		// const value = getAttributeValue("music");
+		// console.log(value);
+		
+		// const setAttributeValue = (id, value) =>{
+		// 	const element = document.getElementById(id);
+		// 	element.value = value;
+		// }
+		// setAttributeValue("music","클래식");
+
+        //위의 중복 없애기 
+        // const music = {
+        //     createElement(id){
+        //         this.element = document.getElementById(id);
+        //     },
+        //     get getAttributeValue(){
+        //         return this.element.value;
+        //     },
+        //     set setAttributeValue(value){
+        //         this.element.value = value;
+        //     }
+        // };
+
+        // music.createElement("music");
+        // console.log(music.getAttributeValue);
+        // music.setAttributeValue = "클래식";
+        
+        // const group = document.getElementById("group");
+        // const list = group.getElementsByTagName("li");
+        // console.log(list[Symbol.toStringTag]);
+        
+        // for(let element of list){
+        //     console.log(element.id);
+        // }
+
+        // const sports = ["체조","펜싱"];
+        // console.log("1.", sports instanceof Array);//ture
+        // // sports 변수가 array 타입이 맞는지 확인한다. 
+
+        // const communicate = sports.join(",");
+        // console.log(communicate);//체조,펜싱
+
+        // console.log(communicate.split(","));//(2) ['체조', '펜싱']
+        
+        // const sports2 = {
+        //     swim : "수영", fencing : "펜싱"
+        // }
+
+        // const sports = {swim : "수영"};
+        // Object.defineProperty(sports, "baseball",{
+        //     value : "야구",
+        //     writable : false,
+        //     enumerable : true
+        // });
+
+        // sports.baseball = "축구";
+        // console.log("1.", sports.baseball);
+
+        // for(let key in sports){
+        //     console.log("2.", key + ":"+sports[key]);
+            
+        // }
+        
+        // const sports = {// 오브젝트 작성
+        //     swim : "수영", //프리미티브 값
+        //     baseball : { // 오브젝트 작성
+        //         membere : { // 오브젝트 안에 오브젝트 작성
+        //             boy: "6명", girl : "5명"
+        //         }
+        //     },
+        //     getItem : function(){
+        //         return this.swim;
+        //     }
+        // };     
+        // function Point(point){
+        //     this.point = point;
+        // }
+        // point.prototype.getPoint = function() {
+        //     return this.point;
+        // }
+
+        // const values = [1,2,3];
+        // console.log(Array.prototype.join.call(values, ""));
+        
+        // console.log(NaN);
+        // var value = 100;
+        // const point = 200;
+
+        // const one = document.getElementById("one");
+        // const context = one.getContext("2d");//2d는 캔버스 
+        // console.log(context[Symbol.toStringTag]);//CanvasRenderingContext2D
+        // context.strokeStyle = "blue";
+        // context.lineWidth = 2;
+        // let startX, startY;
+        // const show = (event) =>{
+        //     context.beginPath();
+        //     context.moveTo(startX,startY);
+        //     context.lineTo(event.offsetX,event.offsetY);
+        //     context.stroke();
+        //     context.closePath();
+        //     startX = event.offsetX, startY = event.offsetY;
+        // }
+
+        // one.addEventListener("mousedown",(event)=>{
+        //     startX = event.offsetX, startY = event.offsetY;
+        //     one.addEventListener("mousemove", show);
+        // });
+        // one.addEventListener("mouseup", (event)=>{
+        //     one.removeEventListener("mousemove",show);
+        // });
+
+        const point = 123;
+        function book(){
+            const point = 100;
+            function show(param){
+                console.log(param +point);
+            }
+            show(300);
+        };
+        book();
+        console.log(point);
+        
+
+
+    </script>
+</body>
+</html>

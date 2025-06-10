@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: animationName 5s linear 1s infinite alternate;
+            /* 
+            aninationName의 애니메이션이 
+            5초동안 
+            동일한 속도로 
+            1초 후에 시작하고
+            무한 반복하고
+            normal -> reverse 순으로 번갈아가면서 실행
+            */
+            
+        }
+
+        @keyframes animationName{
+            0%{
+                background-color: lightblue;
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                background-color: lightcoral;
+                left: 150px;
+                /* 왼쪽으로 부터 150px 떨어지는 좌표 */
+                top: 0px;
+            }
+            50%{background-color: lightcyan; left: 150px; top:150px;}
+            75%{background-color: lightgray; left: 0px; top: 150px;}
+            100%{background-color: lightgreen; left: 0px; top: 0px}
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+
+.container{
+    
+    border: 6px solid lightgray;
+    width: 500px;
+    height: 500px;
+    display: flex;
+
+
+}
+
+.flex-item {
+    color: black;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center; 
+    border: 1px solid black;
+}
+
+.item-1{
+    background-color: lightblue;
+}
+
+.item-2{
+    background-color: lightyellow;
+    order: 1;
+}
+
+.item-3{
+    background-color: lightpink;
+    /* order: -3; */
+}
+.item-4{
+    background-color: lightgreen;
+    /* order: 2; */
+}
+.item-5{
+    background-color: lightgray;
+    /* order: -10; */
+}
+.item-6{
+    background-color: lightsalmon;
+}.item-7{
+    background-color: lightseagreen;
+    /* order: 10; */
+}

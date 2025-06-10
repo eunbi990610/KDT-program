@@ -1,0 +1,52 @@
+
+
+.container{
+    
+    border: 6px solid lightgray;
+    display: flex;
+    /* justify-content: space-evenly; */
+
+}
+#flex-start{
+    justify-content:flex-start ;
+}
+#flex-end{
+    justify-content: flex-end;
+}
+#center{
+    justify-content: center;
+}
+#space-between{
+    justify-content : space-between;
+}
+#space-around{
+    justify-content: space-around;
+}
+#space-evenly{
+    justify-content: space-evenly;
+}
+
+
+.flex-item {
+    color: black;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center; 
+}
+
+.item-1{
+    background-color: lightblue;
+   
+}
+
+.item-2{
+    background-color: lightyellow;
+}
+
+.item-3{
+    background-color: lightpink;
+}
+.item-4{
+    background-color: lightgreen;
+}
+

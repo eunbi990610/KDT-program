@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            height: 120vh;
+        }
+        .box-container{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #669966;
+
+        } 
+        .box-container div{
+            padding: 10px;
+            border: 1px solid green;
+            background-color: #ffdddd;
+        }
+
+        #static-box{
+            position : static; 
+            /* 위치 변동 안됨!!!! */
+            top: 20px;
+            left: 300px;
+        }
+        #relative-box {
+            position: relative;
+            top: 20px;
+            left: 100px;
+        }
+        #absolute-box{
+            position: absolute;
+            top: 20px;
+            right: 150px;
+            /* body를 기준으로  */
+        }
+        #fixed-box{
+            position: fixed;
+            top: 20px;
+            right: 30px;
+        }
+
+        #relative-box-1{
+            position: relative;
+            width: 200px;
+            height: 80px;
+            margin-top: 100px;
+            border: 3px solid green;
+        }
+        #absolute-box-1{
+            position:absolute;
+            border: 2px solid skyblue;
+            top: 40px;
+            left: 50px;
+        }
+        div#sticky {
+            position: sticky;
+            top: 100px;
+            padding: 10px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <div id="static-box">static</div>
+        <div id="relative-box">relative</div>
+        <div id="absolute-box">absolute</div>
+        <div id="fixed-box">fixed</div>
+    </div>
+
+    <div id="relative-box-1">
+        relative
+        <div id="absolute-box-1">
+            absolute
+        </div>
+    </div>
+
+
+    <div id="sticky">i am sticky</div>
+    <div style="padding-bottom: 2000px;">
+        주어진 오프셋 위치가 뷰포트에서 만날 때까지 static 하게 배치된 다음 제자리에 fixed 된다. 
+        주어진 오프셋 위치가 뷰포트에서 만날 때까지 static 하게 배치된 다음 제자리에 fixed 된다. 
+        주어진 오프셋 위치가 뷰포트에서 만날 때까지 static 하게 배치된 다음 제자리에 fixed 된다. 
+        주어진 오프셋 위치가 뷰포트에서 만날 때까지 static 하게 배치된 다음 제자리에 fixed 된다. 
+        주어진 오프셋 위치가 뷰포트에서 만날 때까지 static 하게 배치된 다음 제자리에 fixed 된다. 
+        주어진 오프셋 위치가 뷰포트에서 만날 때까지 static 하게 배치된 다음 제자리에 fixed 된다. 
+        주어진 오프셋 위치가 뷰포트에서 만날 때까지 static 하게 배치된 다음 제자리에 fixed 된다. 
+        주어진 오프셋 위치가 뷰포트에서 만날 때까지 static 하게 배치된 다음 제자리에 fixed 된다. 
+    </div>
+     
+</body>
+</html>

@@ -1,0 +1,309 @@
+.main-container{
+    background-color: var(--primary);
+    margin: 44px 0;
+    display: flex;
+}
+.content-container{
+    width: 100%;
+    max-width: 935px;
+    padding: 0 0 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    width: 100%;
+    max-width: 614px;
+    margin: 0 auto;
+    /* 페이지 크기가 변동되어도 요소가 가운데 있게 만들려면 flex_center 말고도
+        좌우의 여백을 auto로 주는 방법도 있음!
+    */
+    display: flex;
+    flex-direction: column;
+}
+
+.stories{
+    width: 100%;
+    background-color: var(--primary);
+    padding: 16px 0;
+    position : relative;
+    /*  */
+    overflow: hidden;
+}
+.stories::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+
+/* story */
+.story{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.story__border{
+    width: 64px;
+    height: 64px;
+    fill: none;
+    stroke: #c7c7c7;
+    stroke-width: 1.5;
+}
+.story__avatar{
+    position :relative;
+}
+.story__picture{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.story__user{
+    font-size: 12px;
+    font-weight: 400;
+    color: #999999;
+    text-transform: lowercase ;
+    max-width: 72px;
+    text-overflow: ellipsis;
+    /* text가 너비의 길이를 넘어가게 되면 ... 으로 대체됨  */
+    overflow: hidden;
+    white-space: nowrap;
+    /*  white-space : 요소가 공백 문자를 처리하는 법을 지정
+    nowrap : 줄바꿈 안하게 설정  */
+}
+
+.stories__content{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /*  */
+    gap: 16px;
+    padding: 0 16px;
+    position: relative;
+
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /*  */
+}
+
+.stories__content::-webkit-scrollbar{
+    display: none;
+}
+
+/* Post */
+
+.post{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.post__header{
+    background-color: var(--primary);
+    border-bottom: 1px solid #dbdbdb;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.post__profile{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.post__avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+/*  */
+
+.post__user {
+    font-size: 14px;
+    font-weight: 500;
+    color: #262626;
+    text-decoration: none;
+    text-transform: lowercase;
+    /* 소문자로 바꾸기 */
+}
+
+.post__user:hover {
+    text-decoration: underline;
+    /* Text-decoration : a 링크의 밑줄 */
+}
+
+.post__more-options {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.post__content {
+    display: flex;
+    position: relative;
+}
+
+.post__medias {
+    display: flex;
+    overflow-y: hidden ;
+    overflow-x: auto;
+
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* 등록한 사진이 여러개 일때 옆으로 전환시키는 스타일링 */
+}
+.post__medias::-webkit-scrollbar{
+    display: none;
+}
+.post__media{
+    width: 100%;
+    flex: none;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.post__footer {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 4px;
+}
+
+.post__buttons {
+    display: flex;
+    position: relative;
+}
+
+.post__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    padding: 8px;
+}
+
+.post__button--align-right {
+    margin-left: auto;
+    /*  */
+}
+
+.post__infos {
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+    gap: 10px;
+}
+
+.post__likes,
+.post__description {
+    display: flex;
+}
+
+.post__likes {
+    align-items: center;
+    gap: 6px;
+}
+
+.post__likes-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.post__likes span,
+  .post__description span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #262626;
+  }
+  
+  .post__likes a,
+  .post__description a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #262626;
+    text-decoration: none;
+  }
+  
+  .post__name--underline:hover {
+    text-decoration: underline;
+  }
+  
+  .post__footer{
+    padding: 4px 8px 12px;
+  }
+
+  .post__date-time {
+    font-size: 10px;
+    font-weight: 400;
+    color: #999999;
+    text-transform: uppercase;
+  }
+ 
+
+/* width 가 620px 보다 클때 해당 되는 스타일  */
+@media (min-width : 620px){
+    .content-container{
+        padding: 30px 0 24px ;
+    }
+    .content{
+        gap: 24px;
+    }
+    .stories{
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+    }
+    .posts{
+        gap: 24px;
+    }
+    .post{
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+    }
+}
+
+/* width가 1024px 이상이면  */
+@media(min-width:1024px){
+    .main-container{
+        background-color: #fafafa;
+    }
+    .content{
+        margin: unset;
+        /* unset  속성은 부모로부터 상속할 값이 존재하면 상속값을 그렇지 않으면 초깃값을 사용한다.   */
+    }
+}
+
+/* media 쿼리는 코드 뒷 부분에 작성하는 것이 좋음 ! 오버라이딩 발생 가능성 높음 */

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>lazy-loding</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        img{
+            width: 400px;
+            height: 300px;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 뷰포트 안에 있는 이미지는 data-src의 이미지를, 
+      뷰포트 밖에 있는 이미지는 src의 이미지를 보여주게 만들꺼임! -->
+  <img 
+        src="https://placehold.co/400x300?text=400x300"
+        data-src="https://ik.imagekit.io/demo/img/image4.jpeg?tr=w-400,h-300"
+  />
+  <img 
+        src="https://placehold.co/400x300?text=400x300"
+        data-src="https://ik.imagekit.io/demo/img/image4.jpeg?tr=w-400,h-300"
+  />
+  <img 
+        src="https://placehold.co/400x300?text=400x300"
+        data-src="https://ik.imagekit.io/demo/img/image4.jpeg?tr=w-400,h-300"
+  />
+  <img 
+        src="https://placehold.co/400x300?text=400x300"
+        data-src="https://ik.imagekit.io/demo/img/image4.jpeg?tr=w-400,h-300"
+  />
+  <script>
+
+    const observer = new IntersectionObserver(function(entries, observer){
+        console.log(entries); // 4개가 나옴=> 4개를 관찰하고 있어서 아까는 1개만 나왔음!
+        entries.forEach(entry =>{
+            if(entry.isIntersecting){
+                entry.target.src = entry.target.dataset.src;
+                observer.unobserve(entry.target);
+            }
+        })
+    },{threshold:1});
+
+    const imgs = document.querySelectorAll('img');
+    //imgs 안에 img의 모든 노드들이 들어가 있음!
+    imgs.forEach((img)=>{
+        observer.observe(img);
+        // 모든 이미지들을 관찰할 것이다. 
+    })
+
+  </script>
+</body>
+
+
+</html>

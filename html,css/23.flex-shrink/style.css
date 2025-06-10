@@ -1,0 +1,44 @@
+
+.container{
+    
+    border: 6px solid lightgray;
+    width: 400px;
+    /* height: 500px; */
+    display: flex;
+
+
+}
+
+.flex-item {
+    color: black;
+    text-align: center; 
+    /* border: 1px solid black; */
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.item-1{
+    background-color: lightblue;
+    flex-shrink: 100;
+}
+
+.item-2{
+    background-color: lightyellow;
+    flex-shrink: 2;
+}
+
+.item-3{
+    background-color: lightpink;
+    flex-shrink: 1;
+}
+.item-4{
+    background-color: lightgreen;
+}
+.item-5{
+    background-color: lightgray;
+}
+.item-6{
+    background-color: lightsalmon;
+}.item-7{
+    background-color: lightseagreen;
+}

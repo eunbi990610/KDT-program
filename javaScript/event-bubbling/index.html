@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>event-bubbling</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body *{
+            margin: 10px;
+            border : 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <form onclick="alert('form')">Form
+        <!-- <div onclick="event.stopPropagation()">Div  -->
+            <!-- p의 alert만 출력 -->
+        <div onclick="alert('div')">div
+            <p onclick="event.stopPropagation()">P</p>
+            <!-- 아무것도 실행되지 않음 stopPropagation이 실행되는 요소부터 
+             뒤의 요소에는 이벤트가 발생하지 않음 -->
+        </div>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        const div = document.querySelector('div');
+        const p = document.querySelector('p');
+
+        form.onclick = function(event){
+            event.target.style.background = 'yellow'; 
+
+            setTimeout(()=>{
+                alert("target = " + event.target.tagName + ", this = " + this.tagName);
+                event.target.background="";
+            })
+             
+        }// event target -> 실제 이벤트가 시작된 '타겟' 요소이다. 
+        // 핸들러가 할당된 요소 : this (event.currentTarget)
+
+        // 이벤트 버블링 중지
+        // event.stopPropagation()
+
+
+</script> 
+
+
+</body>
+
+</html>

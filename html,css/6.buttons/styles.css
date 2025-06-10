@@ -1,0 +1,87 @@
+.a-button {
+    background-color: rgb(20,40,192);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 30px;
+    padding-top :20px ;    
+    padding-bottom : 20px;
+    padding-left : 16px;
+    padding-right : 16px;
+    /* transition: opacity 1s;
+    transition: background-color 3s; */
+    /* transition: opacity 1s, background-color 2s; */
+    transition: all 2s ease-in;
+    /* all => 모든 속성(opacity, backgorund-color) 모두 적용 */
+    /* transition 은 스타일 변경 시 부드럽게 전환한다. 
+    흔히 호버링 할 때 사용한다. 
+    선택자가 변화되는 것을 시간의 흐름을 줘서 변화시키는 속성
+    transition : 속성 시간 속도 지연시간 */
+
+    /* transition 속도 =>
+        - ease : 기본값, 느리게 시작-빠르게 전환-천천히 종료
+        - linear : 처음부터 끝까지 같은 속도로 전환
+        - ease-in : 가속, 느린 시작- 빠른 끝 => 느린 느낌 
+        - ease-out : 감속 , 빠른 시작 - 느린 끝 => 빠른 느낌
+        - ease-in-out : 느린 시작과 느린 끝으로 전환 효과 지정
+        - cubic-bezier(n,n,n,n) : 3차 베지어 함수에서 자신의 값을 임의적으로 정함
+            -> 직접 숫자를 입력해 베지어 곡선을 커스텀 할 수 있음 
+    */
+
+
+
+}
+
+.a-button:hover{
+    /* 요소에 마우스를 가져갈 때 => hover */
+    opacity: 0.7;
+    /* opacity: 투명도 => 0: 완전 투명 1: 완전 불투명  */
+    background-color: black;
+}
+
+.a-button:active{
+    /* 요소를 클릭할 때 적용! */
+    opacity: 0.3;
+}
+
+.b-button{
+    background-color: white;
+    border-color: rgb(212,6,64);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(6,95,212);
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 9px 16px;
+    transition: background-color 3s, color 0s;
+    /* color 0 으로 하면 transition 이 적용되지 않음! 0초도 무조건 s 붙이기!! */
+}
+
+.b-button:hover{
+    background-color: rgb(6,95,212);
+    color: white;
+}
+
+.b-button:active{
+    opacity:0.7;
+}
+
+.c-button{
+    background-color: rgb(25,69,98);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 74px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: all 1s ease-out ;
+}
+
+.c-button:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}

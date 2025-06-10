@@ -1,0 +1,27 @@
+.side-menu{
+    max-width: 290px;
+    position: fixed;
+    left: 50%;
+    top: 84px; 
+    background-color: aqua;
+    transform: translateX(calc(-50% + 322px));
+    /* transform : translateX() => 오른쪽으로 이동시켜주는  
+       내 너비의 50% 만큼 왼쪽으로 이동 후 322px 만큼 오른쪽으로 이동 */
+    display: none;
+    flex-direction: column;
+}
+
+@media(min-width : 1024px){
+    .side-menu{
+        display: flex;
+    }
+
+}
+
+.side-menu__footer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+/* 요소의 하위 요소들의 자리를 잡을 때 개별로 padding이나 margin을 주는게 아니라
+gap으로 전제적인 간격을 추가한다!!! */

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/fxjs@0.3.0/dist/fx.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+// 1. 홀수 n개 더하기
+    // function f1(limit, list){
+    //     let total = 0; //홀수의 제곱을 더할 변수 
+    //     for(const a of list){// 배열의 순회
+    //         if(a % 2){// 1-> true, 0-> false
+    //             const b = a*a;
+    //             total += b;// 홀수의 제곱값을 TOTAL변수에 더해서 저장 
+    //             if(--limit == 0) break; 
+    //             //조건식에 맞지 않아도 조건식을 읽기 때문에 항상 --가 실행됨 
+    //             // limitㅡ이 숫자가 0이면 반복문 종료 
+    //         }
+    //     }
+    //     console.log(total);// 결과값 출력 
+        
+    // }
+    // f1(3,[1,2,3,4,5,6,7,8,9]); //더할 변수의 개수, 리스트를 매개변수로 받는 f1함수 실행
+// 이터러블 프로그래밍 혹은 리스 프로세싱(Lisp)
+// 2. if를 filter로
+// 3. 값 변화 후 변수 할당을 map으로
+// 4. break를 take로
+
+// function f2(limit, list){
+//         let total = 0;  
+//         // for(const a of list.filter(a=> a % 2)){
+//         for(const a of L.take(limit, L.map(a=>a*a, L.filter(a=>a%2, list)))){
+//             //map : 배열의 모든 요소 각각, 주어진 함수를 호출한 결과를 모아 새로운 배열로 반환
+//             // 홀수 필터로 걸러져 반환된 배열 각각에 a*a의 값을 a에 넣어 배열 반환
+//             //L.take(limit, arr) :  limit 만큼만 arr에서 꺼내겠다. 
+//             total += a;
+//         }
+//         console.log(total);
+        
+//     }
+//     f2(3,[1,2,3,4,5,6,7,8,9]);
+//     // 위 코드(명령어)를 이터러블 프로그래밍으로 변환 
+
+// // 5. 축약 및 합산을 reduce로 
+// const add = (a,b) => a + b;
+// function f3(limit, list){
+//         console.log(
+//             _.reduce(add,// acc: 누적값, a: 밑의 조건식으로 뽑히는 값 
+//             // 0,// 누적하는 값이 0부터 시작 => 생략 가능 어차피 arr은 1부터 시작할 것이기 때문에 
+//             L.take(limit,
+//                 L.map(a=> a*a,
+//                     L.filter(a=> a % 2, list)))));
+//         /*
+//         이 코드를 읽을 때는 오른쪽 아래부터,  filter부터 읽는다. 
+//         리스트에서 조건식에 해당하는 값만 뽑아 filter,
+//         모든 값에 제곱을 하고 map,
+//         limit 값까지만 뽑기로 예약 take,
+//         뽑아서 add로 축약을 해서 출력을 한다. reduce(add)
+//         */
+
+//             _.go(list,
+//                 L.filter(a=>a%2),
+//                 L.map(a => a*a),
+//                 L.take(limit),
+//                 _.reduce(add),
+//                 console.log());
+//                 // _.go(): 평가하고자 하는 순서를 제어해서 사람이 읽기 쉽게 하는 함수
+// }
+
+
+ 
+// 6.while은 range로
+// 7. 효과를 each로 구분 
+
+function f4(end){
+    let i =0;
+    while(i < end){
+        console.log(i);
+        ++i;
+    }
+
+}
+f4(10);
+function f5(end){
+    _.each(console.log, L.range(end)); // range 자체가 이터러블이 된다. 
+}
+f5(10);
+
+
+</script>
+</html>

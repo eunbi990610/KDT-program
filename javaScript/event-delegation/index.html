@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>event-delegation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body *{
+            margin: 10px;
+            border : 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="buttons">
+        <button class="buttonClass">click Me</button>
+        <button class="buttonClass">click me</button>
+    </div>
+
+
+<script>
+    //    const buttons = document.getElementsByClassName('buttonClass');
+    //    for(const button of buttons){
+    //     button.addEventListener('click',() => alert("clicked"));
+    //    }
+
+       const buttonList = document.querySelector('#buttons');
+        // 위임
+        buttonList.addEventListener('click',()=>alert('clicked'));
+        // 이벤트 생성 후 요소 생성 
+       const button = document.createElement('button');
+       button.setAttribute('class','buttonClass');
+       button.innerText = "Click Me";
+       buttonList.appendChild(button); // 함수가 호출이 안됨 
+       /* 새로 생성한 요소에는 이벤트가 실행되지 않는 이유는 for 반복문에서 새로 생성된 요소가 
+       읽히지 않기 때문에 같은 이벤트를 전달하려면 FOR문 안에서 새로운 요소를 생성할 때만다
+         요소를 인식시켜야 한다. 
+        이 과정을 대신하는 것이 이벤트 딜리게이션 이벤트 위임이다. 
+       */
+
+       
+
+
+
+
+
+</script> 
+
+
+</body>
+
+</html>
