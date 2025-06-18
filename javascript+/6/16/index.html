@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM</title>
+</head>
+<body>
+    <div id="top">
+        <h1 id="one">DOM</h1>
+        <div id="two">
+            <p>노드 트리</p>
+        </div>
+    </div>
+    <script>
+        // const el = document.getElementById("top");
+        // console.log(el.childNodes);//NodeList(5) [text, h1#one, text, div#two, text]
+        // console.log(el.childNodes.length);//5
+        /*
+        childNodes: #top 엘리먼트의 차일드 위치의 모든 노드를 반환한다.
+        !! 자손 위치의 <p> 엘리먼트는 반환하지 않는다. 
+        -> 2개?! <h1 id="one">DOM</h1> | <div id="two"> ?? 
+        */
+
+        const el = document.getElementById("top");
+        const childEls = el.children;
+            /*
+            children은 엘리먼트의 차일드 엘리먼트를 모두 반환한다. 
+            #top 엘리먼트의 'top텍스트' 를 반환하지 않으며, 엘리먼트 사이의 #text노드도 반환하지 않는다. 
+            'top텍스트' = 노드 O, 엘리먼트 X
+            for-of 문으로 전개 가능 (for-in 사용하지 않음)
+            */
+        console.log(childEls);//HTMLCollection(2) [h1#one, div#two, one: h1#one, two: div#two]
+        console.log(childEls.length);//2
+        
+        
+
+
+
+
+    </script>
+</body>
+</html>   

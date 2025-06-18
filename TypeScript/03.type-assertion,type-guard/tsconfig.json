@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        //scr/main.ts를 build/js안에 컴파일
+        "rootDir": "./src",
+        "outDir" : "./build/js",
+        "target" : "ES2015",
+        "noEmitOnError": false,
+        //emit : 배출하다.
+        //emitting file : TS파일을 컴파일해서 JS을 이미팅한다!(배출한다)
+        // 즉, true는 에러가 없어야지 이미팅함! false는 에러 있어도 js 만듬
+        "module": "ESNext",//ESNext : ES6 이후의 버전을 통틀어 말함
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "lib" : ["ESNext","DOM"], //컴파일할 때 사용하는 라이브러리 지정
+        "strict": true //true엄격 false엄격X
+    },
+    "include" : [
+        "./src/**/*.ts"
+        // 모든 ts 파일을 include 안에 설정한 파일에서만 찾는다.
+        // 즉 해당 안에서의 ts파일만 js를 바로 만들어준다.  
+    ]
+}
