@@ -9,18 +9,9 @@ import Form from './components/Form';
 
 export default function App(){
 
-  const [todoData, setTodoData] = useState([
-     {
-        id : "1",
-        title : "공부하기",
-        completed : true
-      },
-      {
-        id : "2",
-        title : "청소하기",
-        completed : false
-      }
-  ])
+  const initialTodoData = localStorage.getItem("todoData") ? JSON.parse(localStorage.getItem("todoData")) : []
+
+  const [todoData, setTodoData] = useState(initialTodoData);
   const [value, setValue] = useState('');
 
   const handelSubmit = (e) => {
@@ -34,6 +25,7 @@ export default function App(){
     setTodoData([...todoData, newTodo]);
     setValue('');
     //state는 항상 불변성을 유지해야하기 때문에 전개연산자를 사용하여 얕은 복수를 한 것을 넣어준다. 
+    localStorage.setItem('todoData',JSON.stringify(newTodo))
   }
 
  
