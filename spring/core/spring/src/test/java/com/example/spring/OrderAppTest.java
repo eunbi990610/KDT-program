@@ -1,9 +1,7 @@
 package com.example.spring;
 
-import com.example.spring.member.Grade;
-import com.example.spring.member.Member;
-import com.example.spring.member.MemberService;
-import com.example.spring.member.MemberServiceImpl;
+import com.example.spring.discount.FixedDiscountPolicy;
+import com.example.spring.member.*;
 import com.example.spring.order.Order;
 import com.example.spring.order.OrderService;
 import com.example.spring.order.OrderServiceImpl;
@@ -16,8 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class OrderAppTest {
 
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    MemberService memberService = new MemberServiceImpl(new MemoryMemberRepository());
+    OrderService orderService = new OrderServiceImpl(new MemoryMemberRepository(),new FixedDiscountPolicy());
 
 
 

@@ -3,7 +3,7 @@ package com.example.spring.member;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MemoryMemberRepository implements MemberReopsitory {
+public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long,Member> store = new HashMap<>();
 

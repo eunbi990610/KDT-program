@@ -1,6 +1,6 @@
 package com.example.spring.member;
 
-public interface MemberReopsitory {
+public interface MemberRepository {
 
     void save(Member member);
 
