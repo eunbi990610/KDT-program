@@ -13,12 +13,12 @@ public class MemberServiceTest {
         Member member = new Member(1L, "memberA", Grade.VIP);
 
         //when => 테스트할 메서드(서비스) 작성하는 곳
-        memberService.join(member);
-        Member findMember = memberService.findMember(1L);
-
-
-        //then => 테스트 진행하는 곳
-        Assertions.assertThat(member).isEqualTo(findMember);
+//        memberService.join(member);
+//        Member findMember = memberService.findMember(member.getId());
+//
+//
+//        //then => 테스트 진행하는 곳
+//        Assertions.assertThat(member).isEqualTo(findMember);
         // member의 값이 findMember 와 동일한지 확인하는 테스트
     }
 

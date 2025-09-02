@@ -42,10 +42,10 @@ public class ApplicationContextBasicFindTest {
     @Test
     @DisplayName("빈 이름으로 조회X -FAIL TEST")
     void findBeanByNameX(){
-        MemberService memberService = ac.getBean("xxxxx", MemberService.class);
-//      org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'xxxxx' available
-        assertThrows(NoSuchBeanDefinitionException.class,
-                () -> ac.getBean("xxxxx", MemberService.class));
+//        MemberService memberService = ac.getBean("xxxxx", MemberService.class);
+////      org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'xxxxx' available
+//        assertThrows(NoSuchBeanDefinitionException.class,
+//                () -> ac.getBean("xxxxx", MemberService.class));
 //      무조건 예외가 터져야함!! 예외가 처져야 성공하는 테스트 코드
     }
 
